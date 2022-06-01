@@ -1,5 +1,14 @@
+import { array } from "prop-types";
 import styled from "styled-components";
 import ItemList from "./ItemList";
+
+const propTypes = {
+  list: array,
+};
+
+const defaultProps = {
+  list: [],
+};
 
 const Container = styled.div`
   display: flex;
@@ -21,5 +30,8 @@ const GameList = ({ list }) => {
     </Container>
   );
 };
+
+GameList.propTypes = propTypes;
+GameList.defaultProps = defaultProps;
 
 export default GameList;
